@@ -22,11 +22,11 @@ type CacheItem struct {
 
 func CreateCacheItem(key interface{}, data interface{}, lifeSpan time.Duration) CacheItem {
 	t := time.Now()
-	return CacheTable{
+	return CacheItem{
 		key:            key,
 		data:           data,
 		lifeSpan:       lifeSpan,
-		createOn:       t,
+		createdOn:      t,
 		accessedOn:     t,
 		accessCount:    0,
 		expireCallBack: nil,

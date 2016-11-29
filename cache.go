@@ -9,7 +9,7 @@ var (
 
 func Cache(table string) *CacheTable {
 	mutex.RLock()
-	t, ok = cache[table]
+	t, ok := cache[table]
 	mutex.RUnlock()
 
 	if !ok {

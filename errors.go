@@ -1,6 +1,8 @@
 package levonCache
 
+import "errors"
+
 var (
-	ErrKeyNotFound            = error.New("key not found")
-	ErrKeyNotFoundOrLoadTable = error.New("key not found loaded")
+	ErrKeyNotFound            = errors.New("key not found")
+	ErrKeyNotFoundOrLoadTable = errors.New("key not found loaded")
 )
